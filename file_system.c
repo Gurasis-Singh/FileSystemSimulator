@@ -63,7 +63,8 @@ void create_file(char *name) {
 
 void write_file_cli(char *input) {
     char filename[32], data[512];
-    sscanf(input, "%s %[^
+   sscanf(input, "%s %[^\n]", filename, data);
+
 ]", filename, data);
     File *f = current->files;
     while (f) {
